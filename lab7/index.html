@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script src="script.js" ></script>
+<br>
+
+<p> <h1> Adaugati angajati </h1></p>
+
+<table>
+    <tr>
+        <td>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">  <!-- pentru a nu se autocompleta la formular cu date din cache -->
+                <div>
+                    <label>Full Name*</label><label class="validation-error hide" id="fullnameValidationError">This Field is required</label>
+                    <input type="text" name="fullName" id="fullName">
+                </div>
+
+                <div>
+                    <label>ID</label>
+                    <input type="text" name="Id" id="id">
+                </div>
+
+                <div>
+                    <label>Salary</label>
+                    <input type="text" name="salary" id="salary">
+                </div>
+
+                <div>
+                    <label>City</label>
+                    <input type="text" name="city" id="city">
+                </div>
+
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+        </td>
+
+
+        <td>
+         <table class="list" id="lista-angajati">
+             <thead>
+                <tr>
+                    <th> Full Name </th>
+                    <th> ID </th>
+                    <th onClick="sortColumn('salary')" > Salary </th>
+                    <th> City</th>
+                    <th> </th>
+                </tr>
+             </thead>
+             <tbody>
+
+             </tbody>
+         </table>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
